@@ -38,7 +38,7 @@ export default function Page() {
                 </p>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
-                {projects.map((proj)=> <ProjectCard proj={proj} />)}
+                {projects.map((proj)=> <ProjectCard key={proj.name} proj={proj} />)}
             </div>
         </div>
 

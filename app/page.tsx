@@ -39,7 +39,7 @@ export default function Home() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
-          {projects.map((proj)=> <ProjectCard proj={proj} />)}
+          {projects.map((proj)=> <ProjectCard key={proj.name} proj={proj} />)}
         </div>
         <div>
           <WorkCard />
@@ -74,9 +74,9 @@ function IntroCard () {
   return (
     <div className="border rounded-xl border-[#1E293B] p-8">
         <div className="mb-4 text-slate-300 font-bold text-xl">Software Engineer</div>
-        <div className="mb-4 text-slate-300">I'm Shahzaib, a software engineer who finds joy in crafting web applications.</div>
+        <div className="mb-4 text-slate-300">I am Shahzaib, a software engineer who finds joy in crafting web applications.</div>
         <div className="flex mb-4 items-center gap-1 text-slate-400"><FaLocationDot /> Lahore, Pakistan</div>
-        <div className="flex gap-4">{socials.map(e=> <SocialsIcon icon={e} />)}</div>
+        <div className="flex gap-4">{socials.map(e=> <SocialsIcon key={e.name} icon={e} />)}</div>
     </div>
   )
 }
@@ -127,7 +127,7 @@ function SkillsCard () {
       </div>
     
       <div className="grid md:grid-cols-2 gap-6">
-        {skills.map((skill)=> <SkillCard skill={skill} /> )}
+        {skills.map((skill)=> <SkillCard key={skill.category} skill={skill} /> )}
              
       </div>
     </div>
